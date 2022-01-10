@@ -30,11 +30,11 @@ jobs:
         cd infra_project/
         python manage.py test
 
-build_and_push_to_docker_hub:
-   name: Push Docker image to Docker Hub
-   runs-on: ubuntu-lates
-   needs: tests
-   steps:
+   build_and_push_to_docker_hub:
+     name: Push Docker image to Docker Hub
+     runs-on: ubuntu-lates
+     needs: tests
+     steps:
      - name: Check out the repo
        uses: actions/checkout@v2
        name: Set up Docker Buildx
